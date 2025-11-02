@@ -30,5 +30,20 @@ Esportate quindi il diagramma come immagine e caricatelo nella repo.
 ## Table: posts
 
 - id UNIQUE
-- user_id BIGINT 
-- description
+- user_id BIGINT NOTNULL FOREIGN KEY
+- description TEXT NULL
+
+## Table: medias
+
+- id UNIQUE
+- file_name VARCHAR(50) NOTNULL
+- file_type VARCHAR(25) NOTNULL
+- user_id BIGINT NOTNULL FOREIGN KEY
+- post-id BIGINT NOTNULL FOREIGN KEY
+
+## Table: likes
+
+- id UNIQUE
+- user-id BIGINT NOTNULL FOREIGN KEY
+- post_id BIGINT NOTNULL FOREIGN KEY
+
