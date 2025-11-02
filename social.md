@@ -10,3 +10,25 @@ Individuate prima le entità su cui si basa la piattaforma e poi osservate come 
 
 Esportate quindi il diagramma come immagine e caricatelo nella repo.
 
+# Table
+
+- id
+- users
+- posts
+- medias
+- likes
+
+## Table: users
+
+- id UNIQUE
+- name VARCHAR(50) NOTNULL
+- last_name VARCHAR(50) NOTNULL
+- email VARCHAR(50) NOTNULL UNIQUE
+- username VARCHAR(50) NOTNULL UNIQUE
+- password VARCHAR(50) NOTNULL UNIQUE
+
+## Table: posts
+
+- id UNIQUE
+- user_id BIGINT 
+- description
